@@ -1,0 +1,73 @@
+//
+// App styles
+// --------------------------------------------------
+
+
+// App - form
+// --------------------------------------------------
+.app-form {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+
+
+// App - content
+// --------------------------------------------------
+.app-content {
+	flex: 1;
+	//margin-bottom: (@line-height-computed * -2);
+
+	&.app-content-inverse{
+		background: @brand-primary-dark url("/UI/assets/img/page-header-bg.png") fixed;
+		color: @brand-white;
+
+
+		.panel{
+			color: @text-color;
+		}
+	}
+
+	&.t-domeinen    { background: @brand-domeinen-bg;    }
+	&.t-pijlers     { background: @brand-pijlers-bg;     }
+	&.t-voorwaarden { background: @brand-voorwaarden-bg; }
+}
+
+
+
+
+
+// App - Header
+// --------------------------------------------------
+
+.app-header{
+	@media (min-width: @grid-float-breakpoint) {
+		padding-top: 1.5em;
+		background: @brand-primary-dark url("/UI/assets/img/page-header-bg.png") fixed;
+	}
+}
+
+
+
+// App - Logo
+// --------------------------------------------------
+
+.app-logo{
+	padding: 0 (@line-height-computed / 2) !important;
+}
+
+	.app-logo-image{
+		height: (@line-height-computed * 3);
+
+		@media (min-width: @grid-float-breakpoint) {
+			margin-top: (@line-height-computed * -.75);
+			height: auto;
+		}
+	}
+
+
+.app-footer{
+	padding: (@line-height-computed / 1.5) 0;
+	border-top: 1px solid @gray-lighter;
+}

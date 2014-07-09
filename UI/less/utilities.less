@@ -1,0 +1,124 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+	.clearfix();
+}
+.center-block {
+	.center-block();
+}
+.pull-right {
+	float: right !important;
+}
+.pull-left {
+	float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+	display: none !important;
+}
+.show {
+	display: block !important;
+}
+.invisible {
+	visibility: hidden;
+}
+.text-hide {
+	.text-hide();
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+.affix-wrapper{
+	position: relative;
+}
+
+.affix-top{
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.affix {
+	position: fixed;
+}
+
+
+
+
+// Spacers according to baseline
+// --------------------------------------------------
+.margin-vertical-none{margin-top: 0; margin-bottom: 0;}
+.margin-top-none{margin-top: 0;}
+.margin-bottom-none{margin-bottom: 0;}
+
+.margin-vertical-quarter{margin-top: (@line-height-computed / 4); margin-bottom: (@line-height-computed / 4);}
+.margin-top-quarter{margin-top: (@line-height-computed / 4);}
+.margin-bottom-quarter{margin-bottom: (@line-height-computed / 4);}
+
+.margin-vertical-half{margin-top: (@line-height-computed / 2); margin-bottom: (@line-height-computed / 2);}
+.margin-top-half{margin-top: (@line-height-computed / 2);}
+.margin-bottom-half{margin-bottom: (@line-height-computed / 2);}
+
+.margin-vertical-whole{margin-top: (@line-height-computed); margin-bottom: (@line-height-computed);}
+.margin-top-whole{margin-top: (@line-height-computed);}
+.margin-bottom-whole{margin-bottom: (@line-height-computed);}
+
+.margin-vertical-double{margin-top: (@line-height-computed * 2); margin-bottom: (@line-height-computed * 2);}
+.margin-top-double{margin-top: (@line-height-computed * 2);}
+.margin-bottom-double{margin-bottom: (@line-height-computed * 2);}
+
+
+
+.margin-vertical-triple,
+.margin-top-triple,
+.margin-bottom-triple,
+.margin-vertical-quadruple,
+.margin-top-quadruple,
+.margin-bottom-quadruple{
+	margin-top: (@line-height-computed * 2);
+	margin-bottom: (@line-height-computed * 2);
+}
+
+@media (min-width: @screen-md-min) {
+	.margin-vertical-triple{margin-top: (@line-height-computed * 3); margin-bottom: (@line-height-computed * 3);}
+	.margin-top-triple{margin-top: (@line-height-computed * 3);}
+	.margin-bottom-triple{margin-bottom: (@line-height-computed * 3);}
+
+	.margin-vertical-quadruple{margin-top: (@line-height-computed * 4); margin-bottom: (@line-height-computed * 4);}
+	.margin-top-quadruple{margin-top: (@line-height-computed * 4);}
+	.margin-bottom-quadruple{margin-bottom: (@line-height-computed * 4);}
+}
+
+
+
+.margin-vertical-minus-whole{margin-top: -@line-height-computed; margin-bottom: -@line-height-computed;}
+.margin-top-minus-whole{margin-top: -@line-height-computed;}
+.margin-bottom-minus-whole{margin-bottom: -@line-height-computed;}
+
+.margin-vertical-minus-half{margin-top: (@line-height-computed / -2); margin-bottom: (@line-height-computed / -2);}
+.margin-top-minus-half{margin-top: (@line-height-computed / -2);}
+.margin-bottom-minus-half{margin-bottom: (@line-height-computed / -2);}
+
+

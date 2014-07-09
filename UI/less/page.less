@@ -1,0 +1,81 @@
+//
+// Page elements
+// --------------------------------------------------
+
+
+
+// Page header
+// -------------------------
+
+.page-header {
+	padding: (@line-height-computed * 4) 0 @line-height-computed;
+	//margin: 0 0 (@line-height-computed);
+	background: @brand-primary-dark url("/UI/assets/img/page-header-bg.png") fixed;
+	color: @brand-white;
+
+	.t-domeinen &    { background: @brand-domeinen url("/UI/assets/img/page-header-bg-domeinen.jpg")       fixed; }
+	.t-pijlers &     { background: @brand-pijlers url("/UI/assets/img/page-header-bg-pijlers.jpg")         fixed; }
+	.t-voorwaarden & { background: @brand-voorwaarden url("/UI/assets/img/page-header-bg-voorwaarden.jpg") fixed; }
+
+	.t-domeinen & ,
+	.t-pijlers & ,
+	.t-voorwaarden & {
+	}
+}
+
+	.page-header-content{
+		h1, h2, h3, h4, h5, h6,
+		.h1, .h2, .h3, .h4, .h5, .h6 {
+			margin-bottom: 0;
+			color: @brand-white;
+		}
+
+		p{
+			margin: (@line-height-computed / 2) 0 0;
+		}
+	}
+
+
+
+// Page section
+// -------------------------
+
+.page-section-extended {
+	padding: (@line-height-computed * 4) 0;
+}
+
+.page-section{
+
+	.t-domeinen &,
+	.t-pijlers &,
+	.t-voorwaarden &{
+		padding: (@line-height-computed * 2) 0;
+		border-bottom: 1px solid transparent;
+
+		&:first-child,
+		&.is-first{
+			border-top-style: solid;
+			border-top-width: 1px;
+		}
+	}
+
+	.t-domeinen &    { background: @brand-domeinen-bg;    border-color: darken(@brand-domeinen-bg, 10%); }
+	.t-pijlers &     { background: @brand-pijlers-bg;     border-color: darken(@brand-pijlers-bg, 10%); }
+	.t-voorwaarden & { background: @brand-voorwaarden-bg; border-color: darken(@brand-voorwaarden-bg, 10%); }
+
+	&.t-prestaties{
+		padding: (@line-height-computed * 2) 0;
+
+		&.t-domeinen    { background: @brand-domeinen-bg;    }
+		&.t-pijlers     { background: @brand-pijlers-bg;     }
+		&.t-voorwaarden { background: @brand-voorwaarden-bg; }
+	}
+}
+
+.page-section-title{
+	.h1;
+
+	.t-domeinen &{    color: @brand-domeinen; }
+	.t-pijlers &{     color: @brand-pijlers; }
+	.t-voorwaarden &{ color: @brand-voorwaarden; }
+}

@@ -1,0 +1,116 @@
+//
+// Badges
+// --------------------------------------------------
+
+
+// Base class
+.badge {
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: @font-size-small;
+	font-weight: @badge-font-weight;
+	color: @badge-color;
+	line-height: @badge-line-height;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-align: center;
+	background-color: @badge-bg;
+	border-radius: @badge-border-radius;
+
+	// Empty badges collapse automatically (not available in IE8)
+	&:empty {
+		display: none;
+	}
+
+	// Quick fix for badges in buttons
+	.btn & {
+		position: relative;
+		top: -1px;
+	}
+	.btn-xs & {
+		top: 0;
+		padding: 1px 5px;
+	}
+
+	// Hover state, but only for links
+	a& {
+		&:hover,
+		&:focus {
+			color: @badge-link-hover-color;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+
+	// Account for badges in navs
+	a.list-group-item.active > &,
+	.nav-pills > .active > a > & {
+		color: @badge-active-color;
+		background-color: @badge-active-bg;
+	}
+	.nav-pills > li > a > & {
+		margin-left: 3px;
+	}
+
+	&.badge-bullet{
+		display: inline-block !important;
+		width: (@line-height-computed / 1.5);
+		height: (@line-height-computed / 1.5);
+		border-radius: 50%;
+		vertical-align: middle;
+	}
+
+	&.badge-primary{ background: @brand-primary; }
+	&.badge-success{ background: @brand-success; }
+	&.badge-danger{ background: @brand-danger; }
+	&.badge-warning{ background: @brand-warning; }
+}
+
+
+.badge-group.achievement-status{
+	cursor: pointer;
+
+	&:hover,
+	&:focus{
+		.achievement-status-null{
+			opacity: 1;
+		}
+	}
+
+	a.badge-default{
+		background-color: @badge-bg;
+
+		&.active{
+			background: @gray-dark;
+		}
+
+		&:hover, &:focus{
+			background: darken(@gray-dark, 10%);
+		}
+	}
+
+	a.badge-primary{
+		background-color: @badge-bg;
+
+		&.active{
+			background: @brand-primary;
+		}
+
+		&:hover, &:focus{
+			background: darken(@brand-primary, 10%);
+		}
+	}
+
+	.achievement-status-null{
+		opacity: 0;
+		text-decoration: none;
+		transition: opacity 0.3s ease-out;
+
+		.fa {
+			vertical-align: middle;
+		}
+	}
+}
+
+
